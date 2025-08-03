@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-17T17:07:58.654Z",
+    "end": "2025-06-17T17:07:58.971Z",
+    "duration": 317,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "51b69f04-a499-476a-9088-a9506ac047a0",
+      "title": "",
+      "fullFile": "cypress\\Integration\\Example\\SessionTest.js",
+      "file": "cypress\\Integration\\Example\\SessionTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "350e2f46-7c51-4b87-b631-2c49d74e5dc2",
+          "title": "Session Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Session Test Case",
+              "fullTitle": "Session Test Suite Session Test Case",
+              "timedOut": null,
+              "duration": 95,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var t = this,\n  e = arguments;\nreturn new Promise(function (r, o) {\n  var a = n.apply(t, e);\n  function _next(n) {\n    asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n);\n  }\n  function _throw(n) {\n    asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n);\n  }\n  _next(void 0);\n});",
+              "err": {},
+              "uuid": "1c2afc62-e654-4948-a9e4-29344bf82b79",
+              "parentUUID": "350e2f46-7c51-4b87-b631-2c49d74e5dc2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1c2afc62-e654-4948-a9e4-29344bf82b79"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 95,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

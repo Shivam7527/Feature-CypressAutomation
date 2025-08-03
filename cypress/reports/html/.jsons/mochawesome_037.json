@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-16T09:14:54.213Z",
+    "end": "2025-06-16T09:15:08.960Z",
+    "duration": 14747,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4983a994-dfe5-4a05-9a87-f31c1d035c64",
+      "title": "",
+      "fullFile": "cypress\\Integration\\Example\\TestFramework.js",
+      "file": "cypress\\Integration\\Example\\TestFramework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "284e6bc5-ea66-4941-b7b5-4c6d689ab879",
+          "title": "End to End ecommerce TestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit Order",
+              "fullTitle": "End to End ecommerce TestSuite Submit Order",
+              "timedOut": null,
+              "duration": 11167,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var productName = this.data.productName;\nthis.homepage.goTo('https://rahulshettyacademy.com/loginpagePractise/#');\nvar productPage = this.homepage.login(this.data.username, this.data.password);\nproductPage.pageValidation();\nproductPage.getCardCount().should('have.length', 4);\nproductPage.selectProduct(productName);\nproductPage.selectFirstProduct();\nvar cartPage = productPage.goToCart();\ncartPage.sumOfProducts().then(function (sum) {\n  expect(sum).to.lessThan(200000);\n});\nvar confirmationPage = cartPage.checkoutItems();\nconfirmationPage.submitFormDetails();\nconfirmationPage.getAlertMessage().should('contain.text', 'Success! Thank you! Your order will be delivered in next few weeks :-).');",
+              "err": {},
+              "uuid": "aa1b1daf-e5e5-4c55-890a-65f60cc579fb",
+              "parentUUID": "284e6bc5-ea66-4941-b7b5-4c6d689ab879",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa1b1daf-e5e5-4c55-890a-65f60cc579fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11167,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

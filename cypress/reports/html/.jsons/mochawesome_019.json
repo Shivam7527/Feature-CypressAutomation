@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-13T14:00:29.641Z",
+    "end": "2025-06-13T14:00:47.457Z",
+    "duration": 17816,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "165a2b7b-5ae4-4a6b-bff5-074741b792b8",
+      "title": "",
+      "fullFile": "cypress\\Integration\\Example\\Text5.js",
+      "file": "cypress\\Integration\\Example\\Text5.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2e7cb79-850f-4fd1-9bc5-e99b642d83eb",
+          "title": "Child Window Handling",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "child window test cases",
+              "fullTitle": "Child Window Handling child window test cases",
+              "timedOut": null,
+              "duration": 13323,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\Integration\\\\Example\\\\Text5.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('#opentab').invoke('removeAttr', 'target').click();\ncy.origin('https://www.qaclickacademy.com', function () {\n  cy.get('#navbarSupportedContent a[href*=\"about\"]').click();\n  cy.get('.mt-50 h2').should('contain', 'QAClick Academy');\n});",
+              "err": {},
+              "uuid": "258e994e-9fd1-4502-9da3-49b024f2a181",
+              "parentUUID": "b2e7cb79-850f-4fd1-9bc5-e99b642d83eb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "258e994e-9fd1-4502-9da3-49b024f2a181"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13323,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

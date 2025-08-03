@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-16T09:12:57.956Z",
+    "end": "2025-06-16T09:13:15.629Z",
+    "duration": 17673,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "90f7a4ee-dd1c-4dab-8fd0-18ce61007d80",
+      "title": "",
+      "fullFile": "cypress\\Integration\\Example\\Test11.js",
+      "file": "cypress\\Integration\\Example\\Test11.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7035e96-cf0c-4840-b69d-d0e083991d55",
+          "title": "End to End ecommerce TestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit Order",
+              "fullTitle": "End to End ecommerce TestSuite Submit Order",
+              "timedOut": null,
+              "duration": 14023,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var productName = this.data.productName;\ncy.visit(Cypress.env('url') + \"/loginpagePractise/#\");\ncy.get('#username').type(this.data.username);\ncy.get('#password').type(this.data.password);\ncy.contains('Sign In').click();\ncy.contains('Shop Name').should('be.visible');\ncy.get('.col-md-6').should('have.length', 4);\ncy.get('app-card').filter(\":contains(\\\"\".concat(productName, \"\\\")\")).then(function ($el) {\n  cy.wait(2000);\n  cy.wrap($el).contains('button', 'Add').click();\n});\ncy.get('app-card').eq(0).contains('button', 'Add').click();\ncy.contains('a', 'Checkout').click();\nvar sum = 0;\ncy.get('tr td:nth-child(4) strong').each(function ($el) {\n  var amount = Number($el.text().split(' ')[1].trim());\n  sum += amount;\n}).then(function () {\n  expect(sum).to.lessThan(200000);\n});\ncy.contains('button', 'Checkout').click();\ncy.get('#country').type('India');\n//cy.config('defaultCommandTimeout', 10000);\ncy.wait(2000);\ncy.get('.suggestions ul li a').click();\ncy.get('.btn-success').click();\ncy.get('.alert-success').should('contain.text', 'Success! Thank you! Your order will be delivered in next few weeks :-).');",
+              "err": {},
+              "uuid": "47e4af12-8762-459c-a643-d02e8c176b85",
+              "parentUUID": "d7035e96-cf0c-4840-b69d-d0e083991d55",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "47e4af12-8762-459c-a643-d02e8c176b85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14023,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

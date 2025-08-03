@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-13T15:27:21.384Z",
+    "end": "2025-06-13T15:27:38.503Z",
+    "duration": 17119,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "50199d2c-eb35-49e1-b847-d762f318b8b0",
+      "title": "",
+      "fullFile": "cypress\\Integration\\Example\\Text5.js",
+      "file": "cypress\\Integration\\Example\\Text5.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9c11d0ee-1187-4f23-ae6d-02aec4548217",
+          "title": "Child Window Handling",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "child window test cases",
+              "fullTitle": "Child Window Handling child window test cases",
+              "timedOut": null,
+              "duration": 12278,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\Integration\\\\Example\\\\Text5.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Text5.js\\\\Child Window Handling -- child window test cases (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://rahulshettyacademy.com/AutomationPractice/');\ncy.get('#opentab').invoke('removeAttr', 'target').click();\ncy.origin('https://www.qaclickacademy.com', function () {\n  cy.get('#navbarSupportedContent a[href*=\"about\"]').click();\n  cy.get('.mt-50 h2').should('contain', 'QAClick Academy');\n});",
+              "err": {
+                "message": "CypressError: `cy.origin()` failed to create a spec bridge to communicate with the specified origin. This can happen when you attempt to create a spec bridge to an insecure (http) frame from a secure (https) frame.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nhttps://on.cypress.io/origin",
+                "estack": "CypressError: `cy.origin()` failed to create a spec bridge to communicate with the specified origin. This can happen when you attempt to create a spec bridge to an insecure (http) frame from a secure (https) frame.\n\nCheck your Developer Tools Console for the actual error - it should be printed there.\n\nhttps://on.cypress.io/origin\n    at cypressErr (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:77162:18)\n    at Object.errByPath (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:77216:10)\n    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:122926:80)\nFrom Your Spec Code:\n    at Context.eval (cypress/Integration/Example/Text5.js:8:4)",
+                "diff": null
+              },
+              "uuid": "9bf7b52b-52fc-4885-87ef-372d99876153",
+              "parentUUID": "9c11d0ee-1187-4f23-ae6d-02aec4548217",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9bf7b52b-52fc-4885-87ef-372d99876153"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12278,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
